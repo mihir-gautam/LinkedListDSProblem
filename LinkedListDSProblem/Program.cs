@@ -39,6 +39,15 @@ namespace LinkedListDSProblem
             list4.Add(70);
             list4.InsertAtParticularPosition(2, 30);
             list4.Display();
+
+            //UC5 deleting first node of linked list
+            Console.WriteLine("\n=================================================================");
+            LinkedList list5 = new LinkedList();
+            list5.Add(56);
+            list5.Add(30);
+            list5.Add(70);
+            list5.DeleteFirstNode();
+            list5.Display();
         }
     }
 }

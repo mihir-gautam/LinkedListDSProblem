@@ -85,5 +85,14 @@ namespace LinkedListDSProblem
             }
             return head;
         }
+        public void DeleteFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("No nodes are there in the linked list");
+                return;
+            }
+            this.head = head.next;
+        }
     }
 }
