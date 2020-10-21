@@ -22,7 +22,7 @@ namespace LinkedListDSProblem
             list2.Add(70);
             list2.AddBefore(30);
             list2.AddBefore(56);
-            list.Display();
+            list2.Display();
 
             //UC3 inserting new node after an existing node
             Console.WriteLine("\n=================================================================");
@@ -31,6 +31,14 @@ namespace LinkedListDSProblem
             list3.Add(30);
             list3.Add(70);
             list3.Display();
+
+            //UC4 inserting new node in between existing nodes
+            Console.WriteLine("\n=================================================================");
+            LinkedList list4 = new LinkedList();
+            list4.Add(56);
+            list4.Add(70);
+            list4.InsertAtParticularPosition(2, 30);
+            list4.Display();
         }
     }
 }
