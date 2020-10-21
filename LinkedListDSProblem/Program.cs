@@ -40,7 +40,7 @@ namespace LinkedListDSProblem
             list4.InsertAtParticularPosition(2, 30);
             list4.Display();
 
-            //UC5 deleting first node of linked list
+            //UC5 deleting first node of the linked list
             Console.WriteLine("\n=================================================================");
             LinkedList list5 = new LinkedList();
             list5.Add(56);
@@ -49,7 +49,7 @@ namespace LinkedListDSProblem
             list5.DeleteFirstNode();
             list5.Display();
 
-            //UC6 deleting last node of linked list
+            //UC6 deleting last node of the linked list
             Console.WriteLine("\n=================================================================");
             LinkedList list6 = new LinkedList();
             list6.Add(56);
