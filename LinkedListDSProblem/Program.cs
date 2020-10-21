@@ -48,6 +48,15 @@ namespace LinkedListDSProblem
             list5.Add(70);
             list5.DeleteFirstNode();
             list5.Display();
+
+            //UC6 deleting last node of linked list
+            Console.WriteLine("\n=================================================================");
+            LinkedList list6 = new LinkedList();
+            list6.Add(56);
+            list6.Add(30);
+            list6.Add(70);
+            list6.PopLast();
+            list6.Display();
         }
     }
 }
