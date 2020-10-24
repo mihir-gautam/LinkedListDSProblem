@@ -65,6 +65,9 @@ namespace LinkedListDSProblem
             list7.Add(30);
             list7.Add(70);
             list7.SearchNode(30);
+            //UC8 Insert after a particular value
+            list7.InsertAfterNode(40, 30);
+            Console.WriteLine("\n");
             list7.Display();
         }
     }

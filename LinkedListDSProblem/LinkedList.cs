@@ -119,5 +119,22 @@ namespace LinkedListDSProblem
             }
             return null;
         }
+        public Node InsertAfterNode(int insertedValue, int previousValue)
+        {
+            Node temp = SearchNode(previousValue);
+            if (temp != null)
+            {
+                Node node = new Node(insertedValue);
+                node.next = temp.next;
+                temp.next = node;
+                Console.Write("Node {0} has been inserted after {1}", insertedValue, previousValue);
+                return node;
+            }
+            else
+            {
+                Console.Write("Node could not be inserted");
+                return null;
+            }
+        }
     }
 }
