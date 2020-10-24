@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedListDSProblem
 {
-    class Node
+    public class Node
     {
         public int data;
         public Node next;

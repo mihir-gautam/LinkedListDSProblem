@@ -57,6 +57,15 @@ namespace LinkedListDSProblem
             list6.Add(70);
             list6.PopLast();
             list6.Display();
+
+            //UC7 Searching for node
+            Console.WriteLine("\n=================================================================");
+            LinkedList list7 = new LinkedList();
+            list7.Add(56);
+            list7.Add(30);
+            list7.Add(70);
+            list7.SearchNode(30);
+            list7.Display();
         }
     }
 }

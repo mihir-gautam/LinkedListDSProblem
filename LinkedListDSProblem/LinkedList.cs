@@ -4,10 +4,10 @@ using System.Text;
 
 namespace LinkedListDSProblem
 {
-    class LinkedList
+    public class LinkedList
     {
         internal Node head;
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
 
@@ -53,7 +53,7 @@ namespace LinkedListDSProblem
                 node.next = head;
             }
             head = node;
-            Console.WriteLine("{0} added before the head on the list",node.data);
+            Console.WriteLine("{0} added before the head on the list", node.data);
         }
         //UC4 inserting new node in between existing nodes
         internal Node InsertAtParticularPosition(int position, int data)
@@ -62,7 +62,7 @@ namespace LinkedListDSProblem
                 Console.WriteLine("Invalid position");
             if (position == 1)
             {
-                var newNode = new Node(data);
+                Node newNode = new Node(data);
                 newNode.next = this.head;
                 head = newNode;
             }
@@ -75,7 +75,7 @@ namespace LinkedListDSProblem
                         Node node = new Node(data);
                         node.next = this.head.next;
                         head.next = node;
-                        Console.WriteLine("{0} added successfully at {1} position", node.data, position+1);
+                        Console.WriteLine("{0} added successfully at position no. {1}", node.data, position);
                         break;
                     }
                     head = head.next;
@@ -95,12 +95,29 @@ namespace LinkedListDSProblem
         }
         public void PopLast()
         {
-            Node newNode = head;
-            while (newNode.next.next != null)
+            Node lastNode = head;
+            while (lastNode.next.next != null)
             {
-                newNode = newNode.next;
+                lastNode = lastNode.next;
+
             }
-            newNode.next = null;
+            lastNode.next = null;
+        }
+        public Node SearchNode(int data)
+        {
+
+            Node foundNode = new Node(data);
+            Node temp = head;
+            while (temp.next != null)
+            {
+                if (foundNode.data == temp.data)
+                {
+                    Console.WriteLine("Node with value {0} found", foundNode.data);
+                    return temp;
+                }
+                temp = temp.next;
+            }
+            return null;
         }
     }
 }
