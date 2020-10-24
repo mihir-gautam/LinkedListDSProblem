@@ -64,6 +64,8 @@ namespace LinkedListDSProblem
             list7.Add(56);
             list7.Add(30);
             list7.Add(70);
+            list7.Add(24);
+            list7.Add(98);
             list7.SearchNode(30);
             //UC8 Insert after a particular value
             list7.InsertAfterNode(40, 30);
@@ -74,6 +76,17 @@ namespace LinkedListDSProblem
             list7.Size();
             list7.Display();
 
+            //UC10 Sorting the list while adding nodes
+            Console.WriteLine("\n=================================================================");
+            LinkedList list8 = new LinkedList();
+            list8.SortingWhileAdd(56);
+            list8.SortingWhileAdd(30);
+            list8.SortingWhileAdd(40);
+            list8.SortingWhileAdd(70);
+            list8.SortingWhileAdd(64);
+            list8.SortingWhileAdd(20);
+            list8.SortingWhileAdd(109);
+            list8.Display();
         }
     }
 }

@@ -172,5 +172,31 @@ namespace LinkedListDSProblem
             Console.WriteLine("Size of the list is {0}", size);
             return size;
         }
+        public void SortingWhileAdd(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            { 
+                head = node; 
+            }
+            else
+            {
+                if (head.data > data)
+                {
+                    node.next = head;
+                    head = node;
+                }
+                else
+                {
+                    Node temp = head;
+                    while (temp.next != null && temp.next.data < data)
+                    {
+                        temp = temp.next;
+                    }
+                    node.next = temp.next;
+                    temp.next = node;
+                }
+            }
+        }
     }
 }
