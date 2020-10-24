@@ -31,6 +31,20 @@ namespace LinkedListUnitTest
             int result = node.next.data;
             Assert.AreEqual(expected2, result);
         }
+        [TestMethod]
+        public void Given_ValueToDelete_OfParticularKey_Should_Return_DeletedOrNot_And_SizeOfUpdatedlist()
+        {
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(40);
+            list.Add(70);
+            list.DeleteNodeOfKey(40);
+            Node node = list.SearchNode(30);
+            int result = node.next.data;
+            int expected = 70;
+            Assert.AreEqual(expected, result);
+        }
     }
 }
 

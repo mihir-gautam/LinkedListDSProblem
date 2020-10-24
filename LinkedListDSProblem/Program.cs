@@ -68,7 +68,12 @@ namespace LinkedListDSProblem
             //UC8 Insert after a particular value
             list7.InsertAfterNode(40, 30);
             Console.WriteLine("\n");
+
+            //UC9 Delete Node and show the size of updated linked list
+            list7.DeleteNodeOfKey(40);
+            list7.Size();
             list7.Display();
+
         }
     }
 }

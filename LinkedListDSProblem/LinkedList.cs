@@ -136,5 +136,41 @@ namespace LinkedListDSProblem
                 return null;
             }
         }
+        public void DeleteNodeOfKey(int data)
+        {
+            Node key = SearchNode(data);
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.Write("Node could not be found");
+                return;
+            }
+            else
+            {
+                while (temp.next.data != key.data)
+                {
+                    temp = temp.next;
+                }
+                temp.next = key.next;
+                key.next = null;
+                Console.WriteLine("Data with value {0} has been deleted ", key.data);
+            }
+        }
+        public int Size()
+        {
+            int size = 1;
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("List is empty");
+            }
+            while (temp.next != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            Console.WriteLine("Size of the list is {0}", size);
+            return size;
+        }
     }
 }
